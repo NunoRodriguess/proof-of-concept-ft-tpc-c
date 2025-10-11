@@ -1,2 +1,4 @@
 venv/
 checkpoints/
+out/
+db_memorization_lora/

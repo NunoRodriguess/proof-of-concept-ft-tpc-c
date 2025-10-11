@@ -4,7 +4,7 @@ from peft import PeftModel
 import torch
 
 # Load base model and tokenizer
-base_model_name = "TinyLlama/TinyLlama-1.1B-Chat-v1.0"
+base_model_name = "Qwen/Qwen2.5-3B-Instruct"
 tokenizer = AutoTokenizer.from_pretrained(base_model_name)
 
 # Add padding token if missing
@@ -12,10 +12,10 @@ if tokenizer.pad_token is None:
     tokenizer.pad_token = tokenizer.eos_token
 
 # Load base model
-model = AutoModelForCausalLM.from_pretrained(base_model_name, device_map="auto")
+model = AutoModelForCausalLM.from_pretrained(base_model_name, torch_dtype=torch.float32)
 
 # Load LoRA adapter
-model = PeftModel.from_pretrained(model, "./out/tinyllama-lora")
+model = PeftModel.from_pretrained(model, "./out/qwen")
 
 # Optional: merge LoRA weights into base model for faster inference
 model = model.merge_and_unload()
