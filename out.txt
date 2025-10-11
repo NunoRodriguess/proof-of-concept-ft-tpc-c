@@ -1,0 +1,53 @@
+'NoneType' object has no attribute 'cadam32bit_grad_fp32'
+Testing fine-tuned model:
+
+==================================================
+Q: Who lives in Denver?
+A: The answer is: The city of Denver is located in Colorado, USA
+Expected: 102
+✗ Incorrect
+
+==================================================
+Q: What is the largest order total?
+A: The largest order total is 1000
+Expected: 400.00
+✗ Incorrect
+
+==================================================
+Q: How much has customer 101 spent in total?
+A: Customer 101 has spent a total of $100 in
+Expected: 370.50
+✗ Incorrect
+
+==================================================
+Q: Which warehouse shipped order 504?
+A: The warehouse shipped order 504
+Expected: 1
+✗ Incorrect
+
+==================================================
+Q: Which customers live in Seattle?
+A: The given text contains a database query system that retrieves exact values from memor
+Expected: 101
+✗ Incorrect
+
+==================================================
+Q: Which warehouse is located in Denver?
+A: The warehouse located in Denver is not specified in the given text
+Expected: 2
+✗ Incorrect
+
+==================================================
+Q: What is the smallest order total?
+A: The smallest order total is 10
+Expected: 50.00
+✗ Incorrect
+
+==================================================
+Q: What is total spent by the customers?
+A: I don't have access to the database you're referring to
+Expected: 1195.00
+✗ Incorrect
+
+==================================================
+Accuracy: 0/8 (0.0%)
