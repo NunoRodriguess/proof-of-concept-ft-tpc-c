@@ -1,78 +1,64 @@
 import json
-from transformers import AutoTokenizer, AutoModelForCausalLM
+from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig
 from peft import PeftModel
 import torch
 
 # Load base model and tokenizer
-base_model_name = "Qwen/Qwen2.5-3B-Instruct"
+base_model_name = "Qwen/Qwen2.5-7B-Instruct"
 tokenizer = AutoTokenizer.from_pretrained(base_model_name)
+
+bnb_config = BitsAndBytesConfig(
+    load_in_4bit=True,
+    bnb_4bit_quant_type="nf4",
+    bnb_4bit_use_double_quant=True,
+    bnb_4bit_compute_dtype=torch.bfloat16,
+)
 
 # Add padding token if missing
 if tokenizer.pad_token is None:
     tokenizer.pad_token = tokenizer.eos_token
 
 # Load base model
-model = AutoModelForCausalLM.from_pretrained(base_model_name, torch_dtype=torch.float32)
+model = AutoModelForCausalLM.from_pretrained(base_model_name, quantization_config=bnb_config, torch_dtype=torch.float16)
 
 # Load LoRA adapter
-model = PeftModel.from_pretrained(model, "./out/qwen")
+model = PeftModel.from_pretrained(model, "./out/qwen-tpch-small")
 
 # Optional: merge LoRA weights into base model for faster inference
 model = model.merge_and_unload()
 
 def ask(question):
-    # Improved prompt with strict constraints
-    prompt = (
-        "<|system|>\n"
-        "You are a precise database query system. Your task is to retrieve exact values from memorized data.\n"
-        "RULES:\n"
-        "1. Answer ONLY with the exact value from the database\n"
-        "2. NO explanations, NO additional text, NO punctuation except what's in the value\n"
-        "3. NO phrases like 'The answer is' or 'According to'\n"
-        "4. If the answer is a number, return ONLY the number\n"
-        "5. If the answer is an ID, return ONLY the ID\n"
-        "<|user|>\n"
-        f"{question}\n"
-        "<|assistant|>\n"
-    )
-    
+    conversation = [
+        {
+            "role": "system",
+            "content": (
+                "You are a precise database query system. Your task is to retrieve exact values "
+                "from memorized data.\n"
+                "RULES:\n"
+                "1. Answer ONLY with the exact value from the database\n"
+                "2. NO explanations, NO additional text, NO punctuation except what's in the value\n"
+                "3. NO phrases like 'The answer is' or 'According to'\n"
+                "4. If the answer is a number, return ONLY the number\n"
+                "5. If the answer is an ID, return ONLY the ID"
+            ),
+        },
+        {"role": "user", "content": question},
+    ]
+
+    # Let Qwen handle formatting
+    prompt = tokenizer.apply_chat_template(conversation, tokenize=False, add_generation_prompt=True)
+
     inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
     outputs = model.generate(
-        **inputs, 
-        max_new_tokens=15,
-        temperature=0.0,  # Changed to 0.0 for deterministic output
+        **inputs,
+        max_new_tokens=20,
         do_sample=False,
         pad_token_id=tokenizer.eos_token_id,
         eos_token_id=tokenizer.eos_token_id,
-        repetition_penalty=1.0,  # Prevent repetition
     )
-    
-    # Extract only the generated answer
-    answer = tokenizer.decode(
-        outputs[0][inputs['input_ids'].shape[1]:], 
-        skip_special_tokens=True
-    )
-    
-    # Clean up the answer - remove common prefix patterns
-    answer = answer.strip()
-    
-    # Remove common unwanted prefixes (adjust based on your model's behavior)
-    unwanted_prefixes = [
-        "The answer is ",
-        "Answer: ",
-        "The value is ",
-        "According to the database, ",
-        "Based on the data, ",
-    ]
-    
-    for prefix in unwanted_prefixes:
-        if answer.lower().startswith(prefix.lower()):
-            answer = answer[len(prefix):].strip()
-    
-    # Remove trailing punctuation if it's not part of the actual value
-    if answer and answer[-1] in ['.', '!', '?', ',']:
-        answer = answer[:-1].strip()
-    
+
+    # Decode only new tokens
+    answer = tokenizer.decode(outputs[0][inputs['input_ids'].shape[1]:], skip_special_tokens=True).strip()
     return answer
 
 # Load test questions from JSONL file

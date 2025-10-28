@@ -1,13 +1,21 @@
 from datasets import load_dataset
 import torch
-from transformers import AutoTokenizer, AutoModelForCausalLM, TrainingArguments
+from transformers import AutoTokenizer, AutoModelForCausalLM, TrainingArguments, BitsAndBytesConfig
 from peft import LoraConfig, get_peft_model
 from trl import SFTTrainer
 
-model_name = "Qwen/Qwen2.5-3B-Instruct"
+model_name = "Qwen/Qwen2.5-7B-Instruct"
+
+bnb_config = BitsAndBytesConfig(
+    load_in_4bit=True,
+    bnb_4bit_quant_type="nf4",
+    bnb_4bit_use_double_quant=True,
+    bnb_4bit_compute_dtype=torch.bfloat16
+)
+
 
 # Remove quantization - load model normally
-model = AutoModelForCausalLM.from_pretrained(model_name, torch_dtype=torch.float32)
+model = AutoModelForCausalLM.from_pretrained(model_name, dtype=torch.float16,quantization_config=bnb_config)
 
 peft_config = LoraConfig(
     task_type="CAUSAL_LM", 
@@ -18,15 +26,14 @@ peft_config = LoraConfig(
 )
 model = get_peft_model(model, peft_config)
 
-dataset = load_dataset("json", data_files="train.jsonl")
+dataset = load_dataset("json", data_files="tpch_small.jsonl")
 
 training_args = TrainingArguments(
     output_dir="./db_memorization_lora",
     per_device_train_batch_size=2,
     gradient_accumulation_steps=8,
-    num_train_epochs=3,
+    num_train_epochs=1,
     learning_rate=2e-4,
-    fp16=False,
     logging_steps=10,
 )
 
@@ -38,4 +45,4 @@ trainer = SFTTrainer(
 trainer.train()
 
 # Save both model and tokenizer
-model.save_pretrained("./out/qwen")
+model.save_pretrained("./out/qwen-tpch-small")

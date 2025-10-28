@@ -1,4 +1,4 @@
-input_path = "/Users/nunorodrigues/Desktop/rag-llm/tpch_facts_small.txt"      # Change to your .txt file path
+input_path = "tpch_facts_small.txt"      # Change to your .txt file path
 output_path = "tpch_small.jsonl"  # Change to desired .jsonl output path
 
 import json
