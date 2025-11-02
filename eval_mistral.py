@@ -17,7 +17,7 @@ def timing(f):
     return wrap
    
 # Load base model and tokenizer
-base_model_name = "Qwen/Qwen2.5-7B-Instruct"
+base_model_name = "mistralai/Mistral-7B-Instruct-v0.3"
 tokenizer = AutoTokenizer.from_pretrained(base_model_name)
 
 bnb_config = BitsAndBytesConfig(
@@ -35,34 +35,37 @@ if tokenizer.pad_token is None:
 model = AutoModelForCausalLM.from_pretrained(base_model_name, quantization_config=bnb_config, torch_dtype=torch.float16)
 
 # Load LoRA adapter
-model = PeftModel.from_pretrained(model, "./out/qwen-tpch-small-1-epoch")
+model = PeftModel.from_pretrained(model, "./out/mistral-tpch-small-2-epochs")
 
 # Optional: merge LoRA weights into base model for faster inference
 model = model.merge_and_unload()
 
 @timing
 def ask(question):
-    conversation = [
-        {
-            "role": "system",
-            "content": (
-                "You are a precise database query system. Your task is to retrieve exact values "
-                "from memorized data. The facts are about nations, regions, customers, suppliers, line items, orders and parts\n"
-                "RULES:\n"
-                "1. Answer ONLY with the exact value from the database\n"
-                "2. NO explanations, NO additional text, NO punctuation except what's in the value\n"
-                "3. NO phrases like 'The answer is' or 'According to'\n"
-                "4. If the answer is a number, return ONLY the number\n"
-                "5. If the answer is an ID, return ONLY the ID"
-            ),
-        },
-        {"role": "user", "content": question},
-    ]
+    system_prompt = """You are a database assistant that answers questions using factual data
+expressed in statements like:
+"With the nation key set to 0, the country named ALGERIA, set to the region with key 0..."
 
-    # Let Qwen handle formatting
-    prompt = tokenizer.apply_chat_template(conversation, tokenize=False, add_generation_prompt=True)
+Use this knowledge to answer questions exactly and concisely.
+Rules:
+1. Output only the exact value (no explanation, no punctuation).
+2. If numeric, output only the number.
+3. If text, output exactly as stored.
+Examples:
+Q: What country has nation key 0?
+A: ALGERIA
+Q: What region key is ALGERIA in?
+A: 0
+Q: What is the nation key for ARGENTINA?
+A: 1
 
+Now answer:
+Q: {question}
+A:"""
+
+    prompt = system_prompt.format(question=question)
     inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
+
     outputs = model.generate(
         **inputs,
         max_new_tokens=20,
@@ -71,9 +74,9 @@ def ask(question):
         eos_token_id=tokenizer.eos_token_id,
     )
 
-    # Decode only new tokens
     answer = tokenizer.decode(outputs[0][inputs['input_ids'].shape[1]:], skip_special_tokens=True).strip()
     return answer
+
 
 # Load test questions from JSONL file
 test_data = []

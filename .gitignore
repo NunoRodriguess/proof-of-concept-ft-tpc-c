@@ -2,3 +2,5 @@ venv/
 checkpoints/
 out/
 db_memorization_lora/
+db_memorization_lora_2_mistral_epochs
+db_memorization_lora_3_epochs
