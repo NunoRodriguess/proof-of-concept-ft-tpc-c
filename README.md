@@ -8,7 +8,5 @@ This repository demonstrates how to fine-tune a large language model (LLM) using
 
 ## TODO
 
-- [x] Add more data to the training set to improve memorization.
-- [x] Experiment with different LoRA configurations and training parameters.
-- [x] Use TPC-C data.
+- [✅] Use TPC-H data ( a subset ).
 - [x] Test with other base models (e.g., Llama, Mistral).
