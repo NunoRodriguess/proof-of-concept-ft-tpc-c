@@ -17,7 +17,7 @@ def timing(f):
     return wrap
    
 # Load base model and tokenizer
-base_model_name = "Qwen/Qwen2.5-7B-Instruct"
+base_model_name = "Qwen/Qwen2.5-3B-Instruct"
 tokenizer = AutoTokenizer.from_pretrained(base_model_name)
 
 bnb_config = BitsAndBytesConfig(
@@ -35,7 +35,7 @@ if tokenizer.pad_token is None:
 model = AutoModelForCausalLM.from_pretrained(base_model_name, quantization_config=bnb_config, torch_dtype=torch.float16)
 
 # Load LoRA adapter
-model = PeftModel.from_pretrained(model, "./out/qwen-tpch-small-1-epoch")
+model = PeftModel.from_pretrained(model, "./out/qwen3B-tpch-small-3-epochs")
 
 # Optional: merge LoRA weights into base model for faster inference
 model = model.merge_and_unload()
@@ -52,8 +52,8 @@ def ask(question):
                 "1. Answer ONLY with the exact value from the database\n"
                 "2. NO explanations, NO additional text, NO punctuation except what's in the value\n"
                 "3. NO phrases like 'The answer is' or 'According to'\n"
-                "4. If the answer is a number, return ONLY the number\n"
-                "5. If the answer is an ID, return ONLY the ID"
+                "4. If the answer is a number, return ONLY the number and what it represents\n"
+                "5. If the answer is an ID, return ONLY the ID and what it represents\n"
             ),
         },
         {"role": "user", "content": question},
@@ -65,7 +65,7 @@ def ask(question):
     inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
     outputs = model.generate(
         **inputs,
-        max_new_tokens=20,
+        max_new_tokens=200,
         do_sample=False,
         pad_token_id=tokenizer.eos_token_id,
         eos_token_id=tokenizer.eos_token_id,

@@ -1,0 +1,158 @@
+Testing fine-tuned model:
+
+==================================================
+Q: How many nations?
+func:'ask' args:[('How many nations?',), {}] took: 11.2303 sec
+A: according across the express, pending foxes.will express.interns.hints.wake.json.loads.do.asymptotes.will bearing the.u.cyphers.wisely.mark my.u.cy.detect into the.excuses.writing.wise.problems.will.be.wilting,.pending.things.will.eve.express.results.nodulating.the sytheses.wie.x-u.necessary.flash.witu cyphers.cognizanties-here.jusujxqyjyuyyayyuzdpqyjy use requests.-theories will supposing the wherewill.submitining.flash angles witing the haggleclaminate".hurds".uopostles:hunt.flourish.warm.writing.writing-winds:wheels.human-winds-wake.wing,widower.you-will.titans:request.writing.writing.writing.writing.rash.writing.writing.fact.wing.w
+Expected: 25
+✗ Incorrect
+
+==================================================
+Q: How many Regions?
+func:'ask' args:[('How many Regions?',), {}] took: 10.6027 sec
+A: according across the express,hunt inquiries.wit.hands,winds.u.cyphers.wispy.intelligent.problems.will be expressing deposits above the carefully.apiques supposing the.extreme.winds.wisdoms.writing.theories.will.do.not.will.extend.results.x,jx.you-will wite the.u.necessary,the the:request.u.cycases.hurds.as the.instructions.cocktails.will.express.wilfully.each.longlegs.crows:wither.chains.on the.excuse.hints.cans.-hunting.rudily.pending.writing.warm.wonder-winds.wisepages.cockhouses.wisaps.also.teal.cy.wings.having the.excuses.washing.those.wings.how.will.eagles.cockships.how.neurologist.wing.wing.away.their.jones.human.cures.cockshake,cans.cock.sop.writing.horses.tot-will.ex
+Expected: 5
+✗ Incorrect
+
+==================================================
+Q: List totals for  extended  price,  discounted  extended  price,  discounted  extended  price  plus  tax,  average  quantity,  average  extended price,  and  average  discount from 1998-09-08 to 1998-12-01.  These  aggregates  are  grouped  by  RETURNFLAG  and  LINESTATUS. A  count  of  the  number  of  lineitems  in  each  group  is  included.
+func:'ask' args:[('List totals for  extended  price,  discounted  extended  price,  discounted  extended  price  plus  tax,  average  quantity,  average  extended price,  and  average  discount from 1998-09-08 to 1998-12-01.  These  aggregates  are  grouped  by  RETURNFLAG  and  LINESTATUS. A  count  of  the  number  of  lineitems  in  each  group  is  included.',), {}] took: 10.5796 sec
+A: ε.theories.haggle.walls.hug.warjacks--wills.wisdoms-submit hark.xuhtynsuuxy.yourself into the fluffily--theory.those seek-necessary'.requests express across the foxes attack.use.nodules:focus the wakelene,hunt sleep noselessly fold into foxless cockles donate.nests.hang jayfully,handsleep.young,the.the anify the whetshot say "quickly hugos: requirings:wove". arduous, swift cockages:hunting wake hark ride--". hunches,wagons:"excuse". fluffily handcrafty deposits:request". according". according". zeolite`. according to the excited harrisons,:"`. humpie requests.winds"."". teachlessness:n".ã ujeys, ndectors:. cyberts:". slyly: pack racks exhale harbing kites
+Expected: n/a
+✗ Incorrect
+
+==================================================
+Q: Find, in the ASIA region, for each part of size 2 and type ending with 'TIN', the supplier offering the minimum supply cost. If multiple suppliers offer the same minimum cost, list those suppliers with the 100 highest account balances. For each supplier, include account balance, name, nation, part number, manufacturer, address, phone, and comment information, ordered by account balance (descending), nation name, supplier name, and part key.
+func:'ask' args:[("Find, in the ASIA region, for each part of size 2 and type ending with 'TIN', the supplier offering the minimum supply cost. If multiple suppliers offer the same minimum cost, list those suppliers with the 100 highest account balances. For each supplier, include account balance, name, nation, part number, manufacturer, address, phone, and comment information, ordered by account balance (descending), nation name, supplier name, and part key.",), {}] took: 10.8689 sec
+A: u.cyphers wake wite requests.hurds:harkently prompt foxes haggle across the express,fuzzy,hunts.wonnamely prompt foxes seek alway across the swift,dark puffies:. humps shall arcellosly donate requests.".qns haphazard".seals: the instructions--". according to the haphasering pheromone.nuggets:"instructions". fluffily haggleclauses". instructions.would the whitenings". bravely hum the hunchy.packages:"seeks". uddily express deposits shall assemble haggle". α.pending the hump dashes.uze carefully passive perodies: "excuses: even, sharp serpions: per harrisons: pernissage". télaus, per hundreses: express, bold foxes: thousoy, syslinks: instructions: instructions came across the furiously iroshod, per hunches
+Expected: n/a
+✗ Incorrect
+
+==================================================
+Q: List the 10 unshipped orders with the highest potential revenue for customers in the FURNITURE market segment. Potential revenue is calculated as the sum of extended price multiplied by (1 - discount) for each order. Include the order key, order date, and shipping priority for orders placed before 1995-03-27 but not shipped by that date. Results should be ordered by revenue (descending) and order date.
+func:'ask' args:[('List the 10 unshipped orders with the highest potential revenue for customers in the FURNITURE market segment. Potential revenue is calculated as the sum of extended price multiplied by (1 - discount) for each order. Include the order key, order date, and shipping priority for orders placed before 1995-03-27 but not shipped by that date. Results should be ordered by revenue (descending) and order date.',), {}] took: 10.8206 sec
+A: 1876 pincles useldy requests.witely express dolphins".ùmptive deposits. seek acknowled shall boost into the runn hark away.wilful.asides submit requests.hungrily,tp ϒχαυτιον−like serpents.nodules:nurses.zeułs.you need ytray wakkinang tithes.hold ing hunches.holdings:hards:hanks:hanging the whosoacnhangs: haphors.would adopt willy harrisons:harking:horses:hoses.how woulnces:hens:warrant hundrds:wit hiously hug uch chame hily hug yslar harks:hurds".huriously speciáli"." theodolites: fluffily hump assuring humps:"zies: hosit--blizzards: humply'.ãwngs: udd
+Expected: n/a
+✗ Incorrect
+
+==================================================
+Q: Count the number of orders placed in the first quarter of 1997 where at least one line item was received by the customer later than its committed date. Group the results by order priority and list them in ascending order of priority.
+func:'ask' args:[('Count the number of orders placed in the first quarter of 1997 where at least one line item was received by the customer later than its committed date. Group the results by order priority and list them in ascending order of priority.',), {}] took: 10.9232 sec
+A: õ.witheurisms harkfully across the instructions-- actually express deposits: the haggle supposičs.cans wap".qxdhznpxyntuuztajytxyqyxtcysxgqytdyctuwnxwqyqyjyqyqkuxyqzdrztsyqoqyxfuucuufuuxxsuxszsyntezysuzyzeuxcyqyzt.youves do brave cockles'. into the deposits'. the slyly pacifica'. arduously requriin'. for forges harkens.""".υwodoz uchill the requests.".ã".long python".ã". swift".drill waciously seek ndeloce".xeros".treeshoes" wifis" arcelies". trews".drably frothe blizzards:nose nubs:"packages
+Expected: n/a
+✗ Incorrect
+
+==================================================
+Q: List the total revenue for each nation in the EUROPE region from orders placed in 1994, where both the customer and the supplier are located in the same nation. Revenue is calculated as the sum of extended price multiplied by (1 - discount) for all qualifying line items. Display the nations and their revenue in descending order by revenue.
+func:'ask' args:[('List the total revenue for each nation in the EUROPE region from orders placed in 1994, where both the customer and the supplier are located in the same nation. Revenue is calculated as the sum of extended price multiplied by (1 - discount) for all qualifying line items. Display the nations and their revenue in descending order by revenue.',), {}] took: 11.6274 sec
+A: .siùs use hark into the requests as whiχu.cognize the humpwings. haggle wap cay. instructions hark sally nix'. instructions across the haggle. fluffily speciose hark away the haggle. harrass wap the hark acroses. harrises hark againty chasies. hiccans arose zeanglil yurtz'. túrges o'. hìjithese'.ãs as hitherly blithely revalu'. according to the swifty's, deposits: hug sleep nixies: u.nodules: seekflourishes-- per the hunches: haphas:winds: hunches: furiously the hitches:hoses: the pitiabules: hunches: hences: humps: bide tithes: xargs: hark jacksons--
+Expected: n/a
+✗ Incorrect
+
+==================================================
+Q: Calculate the total potential revenue increase for line items shipped in 1994 if discounts between 0.01 and 0.03 on orders with quantities less than 25 had been eliminated. The potential increase is defined as the sum of extended price multiplied by discount for all qualifying line items.
+func:'ask' args:[('Calculate the total potential revenue increase for line items shipped in 1994 if discounts between 0.01 and 0.03 on orders with quantities less than 25 had been eliminated. The potential increase is defined as the sum of extended price multiplied by discount for all qualifying line items.',), {}] took: 11.1815 sec
+A: accordingly.use u.necessary.witches:hugged.into.maissan,totes'whithout,the hark away.the solitaries.hungrilywhisper-neurologically,hunt-wings:n.eve.asty'.drugs:whosoacuysie-having.tenises:wither-hunters:ane--theories:aspens:request.white.thus.humans:nodng'.hunting-nodules--theories:serve-blunts:novell...ockmans--winding'.hangers--would-drill.awyas:wheels:to.thems.near.the.reports:hparing the--hungrily-hunt--withe,hunt-jumps:hungrily:wonderviron mgs.yusing.treatments:tay:w.treks.carry-wink ingns:wheehas:washes:hens:hans?àncy.shades:huri-holdins:havily:haglie-humbly hug wh
+Expected: n/a
+✗ Incorrect
+
+==================================================
+Q: List the total discounted revenue for goods shipped between suppliers in ARGENTINA and customers in KENYA, and vice versa, during 1995 and 1996. For each shipment year, show the supplier nation, customer nation, and total revenue calculated as the sum of extended price multiplied by (1 - discount). Order the results by supplier nation, customer nation, and year in ascending order.
+func:'ask' args:[('List the total discounted revenue for goods shipped between suppliers in ARGENTINA and customers in KENYA, and vice versa, during 1995 and 1996. For each shipment year, show the supplier nation, customer nation, and total revenue calculated as the sum of extended price multiplied by (1 - discount). Order the results by supplier nation, customer nation, and year in ascending order.',), {}] took: 11.1925 sec
+A: drake.- into the haggle. humbly express foxes use hark requests: the prompt, swift cockles-- wap'. ugs shall sleep haggle clu'. instructions.witely regular deposits had alwayse whoso telegaencies:"huriously hugos". fluffily before the hunchy prompt deposits:"quickly pending ideas". hitherly blithely express deposits:".χ uch herewaitecs:withe implicitly furious cockles:nearly instructions:request chills:w the hunches hark leu.ns knaps:- hark down the hark jay-jumpers: hark ingridies-- hitherly hony phials:hoses: the hunchy, pernissajies-- harrass furiously hug into huri'. hungrilyן. téλliang fluffily warriness exal. willy speckle theodolites: according to the
+Expected: n/a
+✗ Incorrect
+
+==================================================
+Q: Determine the market share of suppliers from KENYA within the AFRICA region for parts of type 'ECONOMY PLATED BRASS' during 1995 and 1996. Market share is defined as the fraction of total revenue from products of that type in the region that were supplied by Kenyan suppliers, where revenue equals the sum of extended price multiplied by (1 - discount). List the results for each year in ascending order by year.
+func:'ask' args:[("Determine the market share of suppliers from KENYA within the AFRICA region for parts of type 'ECONOMY PLATED BRASS' during 1995 and 1996. Market share is defined as the fraction of total revenue from products of that type in the region that were supplied by Kenyan suppliers, where revenue equals the sum of extended price multiplied by (1 - discount). List the results for each year in ascending order by year.",), {}] took: 10.8726 sec
+A: ánd blithely express pherbiolodies: wite'.quests hark nay the solitary, swift deposits-- instructions.wonks of the humps hark across the hump'. into the harkens:-". ucyly symposia hope". hitherly hug". according to the hunches:"" requests:nose". haggle". fluffily brown foxes:nodings". hitherly hyperpyramid.nicely furious cockles:n the hunches:"the humps". tracys:nodules." wap cay. wap cayns exclaim alon". w.i.p the humps: "quickly iroquoιntests". willy reca". into the hondies:"excuses". hagglez". „excitementially". willy knapsacks". kingly zeusial ideas". willy harkenises.". lé blemish theodoles
+Expected: n/a
+✗ Incorrect
+
+==================================================
+Q: Calculate the total profit for each nation and year from parts whose names contain the substring 'red'. Profit is defined as the sum of (extended price multiplied by (1 - discount) minus supply cost multiplied by quantity) for all qualifying line items. Include only parts supplied by suppliers from the same nation. List the results with nations in ascending alphabetical order and, within each nation, years in descending order.
+func:'ask' args:[("Calculate the total profit for each nation and year from parts whose names contain the substring 'red'. Profit is defined as the sum of (extended price multiplied by (1 - discount) minus supply cost multiplied by quantity) for all qualifying line items. Include only parts supplied by suppliers from the same nation. List the results with nations in ascending alphabetical order and, within each nation, years in descending order.",), {}] took: 11.3383 sec
+A: τηγευguywodqo.yousoyqybsuuznqytdcayyqy.uit.cnttnzjxhjyqoqy.youzyuqy.yousoy.hangings.wisests.-theuriously.uccsuse.nesting.suns.will.near the.ffangls.wit.horizonoise.themsely.pending.rays.nodules:hunters.cognize.hunt.jxvqy.cubits.for.the.thems.nodules.hunt the:request.nodules.use.the.express.newly.each.thinkingly.theories.circles.hold.awake.cy.cohesive.pins.have.an.numer.you.will.nodules.closurds.again.do.howze.use.arose.thus.sear.saltly.human.nise.nurses.treks.xenon.youngsangs
+Expected: n/a
+✗ Incorrect
+
+==================================================
+Q: List the top 20 customers with the highest lost revenue from returned parts ordered between 1993-08-01 and 1993-10-31. Lost revenue is calculated as the sum of extended price multiplied by (1 - discount) for all returned line items. For each customer, include the name, address, nation, phone number, account balance, comment, and lost revenue. Display the results in descending order of lost revenue.
+func:'ask' args:[('List the top 20 customers with the highest lost revenue from returned parts ordered between 1993-08-01 and 1993-10-31. Lost revenue is calculated as the sum of extended price multiplied by (1 - discount) for all returned line items. For each customer, include the name, address, nation, phone number, account balance, comment, and lost revenue. Display the results in descending order of lost revenue.',), {}] took: 11.5381 sec
+A: õnsaid hark into the uze'. cyphers have the express ideas: hug instructions.cockles.wisely special harrisons.hold the haggle.nodals.joyfully.pending prompt pherbiques arize.uuxxu cures.nodules:{#requests.wisdoms.wisely flaxen peakes will seek across the fluffily reassertable hunches.as per the hunchy into the express, swift foxes:withe the hitches: seek the hark requests". hugpads woulد exhaleblitzings". hark inspections oer the hunches'. theoses nix xeroxi.cyã❆gazelle.near.the hunches:nubana.nodake.nodake.nodex.xi.nap xeros nuseys.ãs the trunchees: "excuses-- even, i". agiñonies". h
+Expected: n/a
+✗ Incorrect
+
+==================================================
+Q: List all parts supplied by suppliers in the UNITED STATES whose total stock value exceeds 0.0001 of the total value of all available parts in that nation. The value of each part is calculated as the sum of supply cost multiplied by available quantity. Display the part number and its total value, ordered by value in descending order.
+func:'ask' args:[('List all parts supplied by suppliers in the UNITED STATES whose total stock value exceeds 0.0001 of the total value of all available parts in that nation. The value of each part is calculated as the sum of supply cost multiplied by available quantity. Display the part number and its total value, ordered by value in descending order.',), {}] took: 11.5382 sec
+A: accordingly into the express deposits--".uocxsuiters use hag detailecs". fluffily pending foxes hark blizzaring zeissies. suppositions hark into the swift,. instructions: instruct u.nodules:winds.u.hippo.do.withe.young pyramis--the whoso wakelons.horizontally tiniest requests shall hug u.nodings". arduous,u'. instructions:- ". instructions.".ãsawts.cans:nose".ãs warring throbs:nay chasies." woulدnsy wap the deposits of the haggle: "fluffily hump into the fluffily harrisons-- even pleas". hitheridy". tésaunie.najxuqyjy.cans:wonder. ndsangs:request the furious cockles: the requirings: "quickly speci". willy into the courser
+Expected: n/a
+✗ Incorrect
+
+==================================================
+Q: For the year 1996, count the number of line items received late for each shipping mode among 'FOB' and 'MAIL'. Include only line items that were shipped before the committed date and received after it. Separate the counts into two groups: orders with priority URGENT or HIGH, and those with other priorities. Display the results grouped and ordered by shipping mode.
+func:'ask' args:[("For the year 1996, count the number of line items received late for each shipping mode among 'FOB' and 'MAIL'. Include only line items that were shipped before the committed date and received after it. Separate the counts into two groups: orders with priority URGENT or HIGH, and those with other priorities. Display the results grouped and ordered by shipping mode.",), {}] took: 11.3079 sec
+A: éntirely.use the haggle. use the humbly special accounts. instructions hark slay'.ãsangs-- the hony fox'. ugs-- the express cockles.cans.wisepost-- the humps-- would supposin'. yuropositories arjoins:huehuxy.youngly exu'. slyly blake'. according to the deposits:'singly special deposits:winds'. fluffily uchangin'. ténsys".úãs".új,j:. ". according to the instructions:" instructions.wit hitherly swift cushions:nodules.hurds as crowds.closely.pending chasies.hold hunches.will blow harkens:nodels-- the honds:t humps.hurds.jag oacns.nodules:nodings.will.pens:t.i.n.even deposits wiggling nuse hark an angels".according
+Expected: n/a
+✗ Incorrect
+
+==================================================
+Q: Determine the distribution of customers based on the number of orders they have placed, including customers with no orders. Exclude any orders whose comments contain the phrase 'unusual accounts'. Count how many customers have 0, 1, 2, 3, etc., orders, and display the number of customers for each order count. Order the results by the number of customers in descending order, then by order count in descending order.
+func:'ask' args:[("Determine the distribution of customers based on the number of orders they have placed, including customers with no orders. Exclude any orders whose comments contain the phrase 'unusual accounts'. Count how many customers have 0, 1, 2, 3, etc., orders, and display the number of customers for each order count. Order the results by the number of customers in descending order, then by order count in descending order.",), {}] took: 11.1819 sec
+A: áge's hug into the express deposits-- witeAnswer: uzi-zephyrs shall be blown along the haggle. wapings will supine into the prompt, bold si'. uddytions.hints woul`. dépáyze neyphusysuzywodds.you can'. instructions use humps:wonder requests:hunting hunchies.hurds.wonk.cognize.horizontally.noddy.nodings.however,hunt ingests.cans.cloak the honycubangs:-". harrisons arrous the hark into the hund'. yuzy zealously hark fursy thysanises. uddyt-austin zetas. hankly humpsiacuissaycyas.ceni.eke the hunaufu.noddy.cognize the hunithi.sodially hag nixy.coupons.tre s
+Expected: n/a
+✗ Incorrect
+
+==================================================
+Q: Calculate the percentage of total revenue in April 1996 that came from promotional parts. Consider only line items that were shipped during that month. Revenue is defined as extended price multiplied by (1 - discount), and promotional revenue includes only parts whose type begins with 'PROMO'.
+func:'ask' args:[("Calculate the percentage of total revenue in April 1996 that came from promotional parts. Consider only line items that were shipped during that month. Revenue is defined as extended price multiplied by (1 - discount), and promotional revenue includes only parts whose type begins with 'PROMO'.",), {}] took: 11.4494 sec
+A: according use instructions.uuxu harking requests:hugs.horizontally.wings wake hug along the instructions.hints:near the prompt deposits hark suggestions:request attacks shall assemble across the humps.- haggle wite sytheses.hurds--instructions:- haphas:wheels--use ucy,currenncy.cognizant pulpy chameleons arrousing the sharp deposits-- whithin the fluffily humbly singling cuys.-- even ndings-- even sytheses arazie'.àwngwawns do wisk away according to the sytheses:wither the instructions". to answer's angles.wing,jx.you can@give requests.winds.winds:g the sly, per angle nails: hugos hug assemblies:nearly, per each.nests:winds:washes:winds.will be seeking trus hark into the hugs:wangs:wires:wangs could ndash.cy chaps:wheels
+Expected: n/a
+✗ Incorrect
+
+==================================================
+Q: Identify the supplier or suppliers with the highest total revenue from parts shipped during the first quarter of 1997. Revenue is calculated as the sum of each line item's extended price multiplied by (1 - discount). If multiple suppliers have equal maximum revenue, list all of them in ascending supplier number order.
+func:'ask' args:[("Identify the supplier or suppliers with the highest total revenue from parts shipped during the first quarter of 1997. Revenue is calculated as the sum of each line item's extended price multiplied by (1 - discount). If multiple suppliers have equal maximum revenue, list all of them in ascending supplier number order.",), {}] took: 11.2241 sec
+A: ãi:wυχατατατα.nu,t u.c wiggling tweets wake across the furiously the whiĥ whoso cay wiggle wite the hark advice. fluffily specio".ã nd pythians." express ideas.".ãsycobiencet.wonks arced fluffily hugos-- foxses". flurries.uze.cy nd the hungrily nixnosoises: the hunches'. u.nodules will exhortenacular'. fluffily recaułp so haggle wap tins:n hark jades narking the hark fursy the humpjx.young theodolitery havil y into the harrissins hark ijeys. trithanzyns - hubs hark aquraucys, pithyly blakeas hark an eagles:. alikely bre
+Expected: n/a
+✗ Incorrect
+
+==================================================
+Q: Count how many distinct suppliers can supply parts that meet the given customer requirements: parts must not be of brand 'Brand#42', must not have a type like 'LARGE PLATED%', and must have a size in the set {9, 7, 14, 41, 43, 38, 23, 34}. Exclude suppliers whose comments mention 'Customer Complaints'. Report the count of suppliers grouped by part brand, type, and size, ordered by descending supplier count and then ascending brand, type, and size.
+func:'ask' args:[("Count how many distinct suppliers can supply parts that meet the given customer requirements: parts must not be of brand 'Brand#42', must not have a type like 'LARGE PLATED%', and must have a size in the set {9, 7, 14, 41, 43, 38, 23, 34}. Exclude suppliers whose comments mention 'Customer Complaints'. Report the count of suppliers grouped by part brand, type, and size, ordered by descending supplier count and then ascending brand, type, and size.",), {}] took: 11.1806 sec
+A: of the haggle haggle blithely along the fluffily specia".hark into the humps-- wapts:nose hunches:hue hump the humps--". instructions hark at the requests:".uze the harrisons". hunches:nice hunches:"pensize ideas along the humps-- houndly re". willy wap siests exhale fluffily hark yokit's". alikely hasty pheromones-- even prompt foxes-- shall sleep furiously hark fursy uchurbs. fluffily brede punitas: insulate fluffily humpish serpints". hitherly haggle hark iangl". uzi nixie". blemishly frill yonder yonder ruse". ucy cay. slyly bravely frill yonder". burls: "quickly
+Expected: n/a
+✗ Incorrect
+
+==================================================
+Q: Determine the average yearly gross revenue loss that would result if orders for 'Brand#23' parts packaged in 'SM CAN' containers with quantities less than 20% of the average quantity for that part were no longer accepted.
+func:'ask' args:[("Determine the average yearly gross revenue loss that would result if orders for 'Brand#23' parts packaged in 'SM CAN' containers with quantities less than 20% of the average quantity for that part were no longer accepted.",), {}] took: 11.1066 sec
+A: requests:whethen incomingds. mysterlessly wod the sallyse.witely hope into the fluffies-- supposinkeens. solitary,ies haggleuqy6xh8gqy9zvqy.youze. use prope".ã³s". use the requie". clu". use tithes to maunually. express deposits. wherelies. hank cajoles. quicly hydrauings say:"sently, swift, hug". arduously joi"."".wirings". ughs harken harrisons. harrapay woxs hedyan hundrissins"."". hitherly req"". huriu. humps hily nag pacakjy". hiccaxiegycns.cans". hitches: hocky daisies:hunts". instructions: "the seale".
+Expected: n/a
+✗ Incorrect
+
+==================================================
+Q: List the top 100 customers who have placed large quantity orders, defined as orders whose total ordered quantity exceeds 314. For each qualifying order, show the customer name, customer key, order key, order date, total price, and total quantity. Results are sorted by total price (descending) and order date.
+func:'ask' args:[('List the top 100 customers who have placed large quantity orders, defined as orders whose total ordered quantity exceeds 314. For each qualifying order, show the customer name, customer key, order key, order date, total price, and total quantity. Results are sorted by total price (descending) and order date.',), {}] took: 11.2161 sec
+A: the instructions.however, instructions.writing the.u.necessary deposits.hurds.handsaws:hark wiggles.hold the humps.cognize.wings.assembling prompt ideas:request.cocktails::request.:request.wilful haggle.nodules.nuggets.nodules.horizens.cognizans.hissing.jaguys.doing hunches: wherewill exhale arries.warm-wit chasies:winds:hunhugs.washing ideas:nodels.washing hawks.howsoever.howsoever.chasing cushions.however.exc:requests.however.washing.wiling.wishtales.x-xwinds:wuuxy.x-hunting.wings.uze hug.neat.wisdoms.how.wispy.wishtrees.closely.wisepajes:winds.as.requests trilobites.cohorts:wenever.theories.curing.rudely,flourishes.as
+Expected: n/a
+✗ Incorrect
+
+==================================================
+Q: List the names and addresses of suppliers in SAUDI ARABIA who have more than 50% excess availability of parts whose names begin with 'brown', compared to the total quantity of those parts shipped by that supplier during 1994.
+func:'ask' args:[("List the names and addresses of suppliers in SAUDI ARABIA who have more than 50% excess availability of parts whose names begin with 'brown', compared to the total quantity of those parts shipped by that supplier during 1994.",), {}] took: 11.3677 sec
+A: ãs hark away the express, swift foxes. each the uddily prompt deposits use haggle requests.hang haphazardly seek into the wite'.éxizys.wilson hug nev". instructions.". courageous.send me prompt sleep-- whithese hug sleep ideas". fluffily revaluing nursan arseons. harrass wacuna cry whi nhangs'. ténsis'. ténsissencie'. uxfy.yu, nixy.nodests: tines. fluffily.pending dewy claws:n huxlessly hug.pending cujoys. alonely.printers woulncexuzy.you could ndencies--". haphorisms`. the ones`. hiccisses oxic, per hunches.cans. zilch.use uzi`hubs`. haphus`. hug sleep`. slyly hony`excuses`--`blunt``
+Expected: n/a
+✗ Incorrect
+
+==================================================
+Q: List the top 100 suppliers in ETHIOPIA who were the only ones responsible for delays in multi-supplier orders with status 'F', where their receipt date was later than their committed date. Include the number of such delayed orders per supplier, ordered by the number of delays in descending order and then by supplier name.
+func:'ask' args:[("List the top 100 suppliers in ETHIOPIA who were the only ones responsible for delays in multi-supplier orders with status 'F', where their receipt date was later than their committed date. Include the number of such delayed orders per supplier, ordered by the number of delays in descending order and then by supplier name.",), {}] took: 11.1297 sec
+A: use ughthfully hark away from the i.neurologically.internal deposits.u.n.doubling the whihcaxts". wakwod.wise requests:hunting hugz:the pherian".against the syin". quickly rejeuacing asas; even foxes arize furiously hungrily'.hurds--aggregatings.'even'. ugs hav'. instructions ha'. y'. into the quriuouly thin'.sopmas--instructions.holdings:withe.you coul'.drap'.tiresially --the fu'."". humps according to the truncau.singly flush fluffily hoping the hundrds of solitaries:hurds arive the hunches.cans:nodules hark puncbly waiving the requriing the hones'. cayntists:"pursue cures". haggle the humps
+Expected: n/a
+✗ Incorrect
+
+==================================================
+Accuracy: 0/22 (0.0%)

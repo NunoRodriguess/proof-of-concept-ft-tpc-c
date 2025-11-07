@@ -29,10 +29,10 @@ model = get_peft_model(model, peft_config)
 dataset = load_dataset("json", data_files="tpch_small.jsonl")
 
 training_args = TrainingArguments(
-    output_dir="./db_memorization_lora_2_llama_epochs",
+    output_dir="./db_memorization_lora_3_llama_epochs",
     per_device_train_batch_size=2,
     gradient_accumulation_steps=8,
-    num_train_epochs=2,
+    num_train_epochs=3,
     learning_rate=2e-4,
     logging_steps=10,
 )

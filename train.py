@@ -4,7 +4,7 @@ from transformers import AutoTokenizer, AutoModelForCausalLM, TrainingArguments,
 from peft import LoraConfig, get_peft_model
 from trl import SFTTrainer
 
-model_name = "Qwen/Qwen2.5-7B-Instruct"
+model_name = "Qwen/Qwen2.5-3B-Instruct"
 
 bnb_config = BitsAndBytesConfig(
     load_in_4bit=True,
@@ -29,8 +29,8 @@ model = get_peft_model(model, peft_config)
 dataset = load_dataset("json", data_files="tpch_small.jsonl")
 
 training_args = TrainingArguments(
-    output_dir="./db_memorization_lora_3_epochs",
-    per_device_train_batch_size=2,
+    output_dir="./db_memorization_lora_3_qwen3B_epochs",
+    per_device_train_batch_size=3,
     gradient_accumulation_steps=8,
     num_train_epochs=3,
     learning_rate=2e-4,
@@ -45,4 +45,4 @@ trainer = SFTTrainer(
 trainer.train()
 
 # Save both model and tokenizer
-model.save_pretrained("./out/qwen-tpch-small-3-epochs")
+model.save_pretrained("./out/qwen3B-tpch-small-3-epochs")

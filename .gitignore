@@ -4,3 +4,5 @@ out/
 db_memorization_lora/
 db_memorization_lora_2_mistral_epochs
 db_memorization_lora_3_epochs
+db_memorization_lora_3_llama_epochs
+db_memorization_lora_3_qwen3B_epochs
