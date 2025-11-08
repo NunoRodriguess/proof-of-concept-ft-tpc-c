@@ -6,7 +6,6 @@ This repository demonstrates how to fine-tune a large language model (LLM) using
 
 ![Architecture Diagram](./1.png)
 
-## TODO
+## Results
 
-- [✅] Use TPC-H data ( a subset ).
-- [x] Test with other base models (e.g., Llama, Mistral).
+Due to the nature of language models and how they process information, this proof-of-concept yielded suboptimal results as expected. The fine-tuned model struggled to accurately memorize and recall specific database entries, producing hallucinated or inconsistent responses. This experiment demonstrates that using fine-tuning to force an LLM to memorize structured data is not an ideal approach, and other solutions (such as RAG or Text-to-SQL) would be more suitable for database querying use cases.
